@@ -1,13 +1,14 @@
-import Navbar from "../components/Navbar"
+import Layout from "../components/Layout"
 import Hero from "../components/Hero"
+import FeatureSection from "../components/FeatureSection"
 
 const MainPage = ()=>{
     return(
         <>
-        <div>
-            <Navbar />
+        <Layout>
             <Hero />
-        </div>
+            <FeatureSection />
+        </Layout>
         </>
     )
 }

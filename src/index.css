@@ -21,21 +21,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
   border-radius: 8px;
-
   padding: 0.6em 1.2em;
   font-weight: 500;
   font-family: inherit;
-  
-  
 }
 
 button:focus,
@@ -43,11 +42,34 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+
+.gradient-border {
+  position: relative;
+  border-top: 2px solid transparent;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ef4444, transparent);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
- 
- 
 }
