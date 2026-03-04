@@ -13,17 +13,24 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
+
+
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  max-width: 100vw;
+  
+  
+  box-sizing: border-box;
 }
 
 h1 {
@@ -37,17 +44,10 @@ button {
   font-family: inherit;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-
-
 .gradient-border {
   position: relative;
   border-top: 2px solid transparent;
-  overflow: hidden;
+
 }
 
 .gradient-border::before {

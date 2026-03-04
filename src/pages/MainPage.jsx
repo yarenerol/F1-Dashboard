@@ -7,7 +7,9 @@ const MainPage = ()=>{
         <>
         <Layout>
             <Hero />
-            <FeatureSection />
+            <div id="features">
+                <FeatureSection />
+            </div>
         </Layout>
         </>
     )

@@ -1,20 +1,60 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const Navbar = ()=>{
-    return (
-        <>
-        <div className="flex justify-between w-screen fixed top-0 z-50 navbar py-7 px-4 items-center bg-[#0A0E27] border-b border-red-500/20">
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="flex justify-between w-screen fixed top-0 z-50 py-7 px-4 items-center bg-[#0A0E27] border-b border-red-500/20">
+      {/* Logo */}
+        <button onClick={() => {window.location.href = "/#hero"}} className="title flex items-center cursor-pointer">
             <div className="title flex items-center">
-                <i className="text-3xl fa-solid fa-bolt ml-8 font-bold text-red-500"></i>
-                <h2 className="px-5 text-3xl font-bold bg-linear-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">F1 DASHBOARD</h2>
+                <i className="text-3xl fa-solid fa-bolt sm:ml-8 font-bold text-red-500"></i>
+                <h2 className="px-5 text-3xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent sm:block">
+                F1 DASHBOARD
+                </h2>
             </div>
-            <nav className="nav-items">
-                <Link to="" className="relative mx-8 pb-1 nav-item font-normal text-zinc-300 hover:text-red-500 duration-300 group">Schedule<span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span></Link>
-                <Link to="" className="relative mx-8 pb-1 nav-item font-normal text-zinc-300 hover:text-red-500 duration-300 group">Standings<span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span></Link>
-                <Link to="" className="relative mx-8 pb-1 nav-item font-normal text-zinc-300 hover:text-red-500 duration-300 group">Features<span classn="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span></Link>
-            </nav>
+        </button>
+      {/* Desktop Links */}
+      <nav className="hidden md:flex gap-8">
+        <Link to="/schedule" className="relative pb-1 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
+          Schedule
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+        <Link to="/" className="relative pb-1 ml-8 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
+          Standings
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+        <Link to="/#features" className=" mx-8 relative pb-1 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
+          Features
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+        </Link>
+      </nav>
+
+      {/* Hamburger Icon (Mobile) */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden text-red-500 text-2xl"
+      >
+        <i className={`fa-solid ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
+      </button>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-20 left-0 right-0 bg-[#0A0E27] border-b border-red-500/20 flex flex-col gap-4 p-4 md:hidden">
+          <Link to="/schedule" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
+            Schedule
+          </Link>
+          <Link to="/" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
+            Standings
+          </Link>
+          <Link to="/#features" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
+            Features
+          </Link>
         </div>
-        </>
-    )
+      )}
+    </div>
+  )
 }
+
 export default Navbar
