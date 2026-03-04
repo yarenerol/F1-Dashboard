@@ -2,7 +2,7 @@
 
 A modern, sleek Formula 1 information platform built with React and Tailwind CSS. Real-time race schedules, driver standings, and detailed analytics—all in one place.
 
-**[🚀 Live Demo](#)** | **[GitHub Repository](#)** | **[API Documentation](https://openf1.org/docs)**
+**[🚀 Live Demo](f1-dashboard-beige.vercel.app)** | **[GitHub Repository](https://github.com/yarenerol/F1-Dashboard)** | **[API Documentation](https://openf1.org/docs)**
 
 ---
 
