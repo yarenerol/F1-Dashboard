@@ -10,7 +10,7 @@ const Navbar = () => {
         <button onClick={() => {window.location.href = "/#hero"}} className="title flex items-center cursor-pointer">
             <div className="title flex items-center">
                 <i className="text-3xl fa-solid fa-bolt sm:ml-8 font-bold text-red-500"></i>
-                <h2 className="px-5 text-3xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent sm:block">
+                <h2 className="px-5 text-3xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent hidden sm:block">
                 F1 DASHBOARD
                 </h2>
             </div>

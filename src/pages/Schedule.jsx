@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Layout from "../components/Layout"
 import MeetingCard from "../components/MeetingCard"
+import { Link } from "react-router-dom";
 
 const Schedule = ()=>{
 
@@ -37,7 +38,9 @@ const Schedule = ()=>{
                     ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8 max-w-7xl">{
                         meetings.map((meeting)=>(
-                            <MeetingCard key={meeting.circuit_key} {...meeting}/>
+                            <Link to={`/schedule/${meeting.meeting_key}`} key={meeting.meeting_key}>
+                                <MeetingCard key={meeting.circuit_key} {...meeting}/>
+                            </Link>
                         ))}
                     </div>)}
                 </div>
