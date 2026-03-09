@@ -7,7 +7,7 @@ const DriverStandingsTable = ({ results })=>{
                         <tr>
                             <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm ">POS</th>
                             <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm">DRIVER</th>
-                            
+                            <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm">TEAM</th>
                             <th className="px-4 py-3 text-right text-yellow-400 font-bold uppercase text-sm">POINTS</th>
                         </tr>
                     </thead>
@@ -15,8 +15,9 @@ const DriverStandingsTable = ({ results })=>{
                         {results.map((driver) => (
                             <tr key={driver.driver_number} className="border-b border-red-500/10 hover:bg-red-500/5 transition">
                                 <td className="px-4 py-3 text-yellow-400 font-bold">{driver.position_current}</td>
-                                <td className="px-4 py-3 text-white font-semibold">{driver.driver_number}</td>
-                                <td className="px-4 py-3 text-right text-red-400 font-bold">{driver.points_current}</td>
+                                <td className="px-4 py-3 text-white font-semibold">{driver.driver_name}</td>
+                                <td className="px-4 py-3 text-white font-semibold">{driver.driver_team}</td>
+                                <td className="px-4 py-3 text-right text-red-400 font-bold">{driver.points_current ?? 0}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -11,11 +11,20 @@ const DriversChampionship = ()=>{
         const fetchDriverStandings = async ()=>{
             try {
                 setLoading(true);
-                const res = await fetch('https://api.openf1.org/v1/championship_drivers?session_key=latest');
-                const data = await res.json();
-                const sorted = data.sort((a, b) => b.points_current - a.points_current);
+                const resChampionship = await fetch('https://api.openf1.org/v1/championship_drivers?session_key=latest');
+                const championship = await resChampionship.json();
+                
+                const resDrivers = await fetch('https://api.openf1.org/v1/drivers?session_key=latest');
+                const drivers = await resDrivers.json();
+
+                const merged = championship.map(result => {
+                    const driver = drivers.find(d => d.driver_number === result.driver_number);
+                    return {...result, driver_name: driver?.full_name, driver_team: driver?.team_name, driver_country: driver?.country_code}
+                })
+                
+                const sorted = merged.sort((a, b) => b.points_current - a.points_current);
                 setResults(sorted);
-           
+
             } catch (error) {
                 console.log(error);
             } finally {
@@ -24,7 +33,6 @@ const DriversChampionship = ()=>{
         }
         fetchDriverStandings();
     }, []);
-
 
     return(
         <>
