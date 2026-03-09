@@ -36,7 +36,7 @@ const Schedule = ()=>{
                     {loading ? (
                         <div className="text-center text-white mt-20 text-xl">Yükleniyor...</div>
                     ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8 max-w-7xl">{
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8 max-w-7xl ">{
                         meetings.map((meeting)=>(
                             <Link to={`/schedule/${meeting.meeting_key}`} key={meeting.meeting_key}>
                                 <MeetingCard key={meeting.circuit_key} {...meeting}/>

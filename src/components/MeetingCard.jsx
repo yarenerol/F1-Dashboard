@@ -8,7 +8,7 @@ const MeetingCard = ({ country_flag, meeting_name, country_name, meeting_officia
 
     return(
         <>
-        <div className="bg-slate-800 border-2 border-red-500/20 rounded-xl p-9 shadow-md shadow-red-500/20 mt-10 hover:shadow-red-500/30 hover:-translate-y-1 hover:border-4 transition-all duration-300 gradient-border" >
+        <div className="bg-slate-800 border-2 border-red-500/20 rounded-xl p-9 shadow-md shadow-red-500/20 mt-10 hover:shadow-red-500/30 hover:-translate-y-1 hover:border-4 transition-all duration-300 gradient-border h-70" >
             <div className="flex flex-row">
                 <img src={country_flag} alt="" className="w-14 h-10 rounded " />
                 <div className="mx-4">
