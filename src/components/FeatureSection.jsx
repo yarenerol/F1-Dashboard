@@ -2,7 +2,10 @@ import FeatureCard from "./FeatureCard"
 
 const FeatureSection = ()=>{
 
-    const features = [{icon: "📅", title: "Takvim", description: "Sezonun tüm yarışlarını takvim halinde görüntüle. Tarih, saat, lokasyon bilgilerine eriş.", link: "/schedule"}]
+    const features = [
+        {icon: "📅", title: "Takvim", description: "Sezonun tüm yarışlarını takvim halinde görüntüle. Tarih, saat, lokasyon bilgilerine eriş.", link: "/schedule"},
+        {icon: "🏎", title: "Sürücüler Şampiyonası", description: "Pilotların sezondaki güncel sıralamasını görüntüle.", link: "/drivers-championship"},
+    ]
 
     return (
         <>

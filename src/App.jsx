@@ -4,6 +4,7 @@ import './App.css'
 import MainPage from './pages/MainPage'
 import Schedule from './pages/Schedule'
 import MeetingDetail from './pages/MeetingDetail'
+import DriversChampionship from './pages/DriversChampionship'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Schedule />}/>
         <Route path=':meeting_key' element={<MeetingDetail />}/>
       </Route>
+      <Route path='/drivers-championship' element={<DriversChampionship />}></Route>
     </Routes>
   )
 }
