@@ -5,6 +5,7 @@ const FeatureSection = ()=>{
     const features = [
         {icon: "📅", title: "Takvim", description: "Sezonun tüm yarışlarını takvim halinde görüntüle. Tarih, saat, lokasyon bilgilerine eriş.", link: "/schedule"},
         {icon: "🏎", title: "Sürücüler Şampiyonası", description: "Pilotların sezondaki güncel sıralamasını görüntüle.", link: "/drivers-championship"},
+        {icon: "🏆", title: "Markalar Şampiyonası", description: "Markaların sezondaki güncel sıralamasını görüntüle.", link: "/constructors-championship"},
     ]
 
     return (

@@ -21,7 +21,7 @@ const Navbar = () => {
           Schedule
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
-        <Link to="/" className="relative pb-1 ml-8 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
+        <Link to="/drivers-championship" className="relative pb-1 ml-8 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
           Standings
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
