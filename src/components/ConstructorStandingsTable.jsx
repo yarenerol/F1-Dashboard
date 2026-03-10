@@ -5,9 +5,9 @@ const ConstructorStandingsTable = ({ results })=>{
                 <table className="w-full border-collapse">
                     <thead className="bg-[#332C3C] border-b-2 border-red-500/30">
                         <tr>
-                            <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm ">POS</th>
-                            <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm">CONSTRUCTOR</th>
-                            <th className="px-4 py-3 text-right text-yellow-400 font-bold uppercase text-sm">POINTS</th>
+                            <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm ">POZ</th>
+                            <th className="px-4 py-3 text-left text-yellow-400 font-bold uppercase text-sm">MARKA</th>
+                            <th className="px-4 py-3 text-right text-yellow-400 font-bold uppercase text-sm">PUAN</th>
                         </tr>
                     </thead>
                     <tbody>
