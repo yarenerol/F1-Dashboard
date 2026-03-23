@@ -1,0 +1,80 @@
+{
+    "common" : {
+        "loading" : "Yükleniyor..."
+    },
+    "navbar": {
+        "schedule": "Takvim",
+        "standings": "Sıralamalar",
+        "features": "Özellikler"
+    },
+    "hero" : {
+        "welcome" : "Hoşgeldiniz!",
+        "desc" : "Takip et, karşılaştır, analiz et. Tüm F1 verisi gerçek zamanlı olarak tek bir platformda!",
+        "calendarButton": "Takvimi gör",
+        "moreInfo": "Daha fazla bilgi"
+    },
+    "featureSection" : {
+        "title" : "Özellikler",
+        "desc" : "Her geçen gün güncellenen özellikler listemiz"
+    },
+    "features" : [
+        {"icon": "📅", "title": "Takvim", "description": "Sezonun tüm yarışlarını takvim halinde görüntüle. Tarih, saat, lokasyon bilgilerine eriş.", "link": "/schedule"},
+        {"icon": "🏎", "title": "Sürücüler Şampiyonası", "description": "Pilotların sezondaki güncel sıralamasını görüntüle.", "link": "/drivers-championship"},
+        {"icon": "🏆", "title": "Markalar Şampiyonası", "description": "Markaların sezondaki güncel sıralamasını görüntüle.", "link": "/constructors-championship"}
+    ],
+    "schedule" : {
+        "title" : "2026 Yarış Takvimi",
+        "desc" : "Sezonun tüm yarışlarını buradan takip et."
+    },
+    "countries": {
+    "japan": "Japonya",
+    "italy": "İtalya",
+    "monaco": "Monako",
+    "germany": "Almanya",
+    "netherlands": "Hollanda",
+    "brazil": "Brezilya",
+    "australia": "Avustralya",
+    "united kingdom": "Birleşik Krallık",
+    "china" : "Çin",
+    "bahrain" : "Bahreyn",
+    "saudi arabia" : "Suudi Arabistan",
+    "canada" : "Kanada",
+    "spain" : "İspanya",
+    "austria" : "Avusturya",
+    "belgium" : "Belçika",
+    "hungary" : "Macaristan",
+    "azerbaijan" : "Azerbaycan",
+    "singapore" : "Singapur",
+    "united states" : "Amerika Birleşik Devletleri",
+    "mexico" : "Meksika",
+    "qatar" : "Katar",
+    "united arab emirates" : "Birleşik Arap Emirlikleri"
+  },
+  "meetingName":{
+    "pre-season testing" : "Sezon Öncesi Testleri",
+    "australian grand prix" : "Avusturya Grand Prix",
+    "chinese grand prix" : "Çin Grand Prix",
+    "japanese grand prix" : "Japonya Grand Prix",
+    "bahrain grand prix" : "Bahreyn Grand Prix",
+    "saudi arabian grand prix" : "Suudi Arabistan Grand Prix",
+    "miami grand prix" : "Miami Grand Prix",
+    "canadian grand prix" : "Kanada Grand Prix",
+    "monaco grand prix" : "Monako Grand Prix",
+    "barcelona grand prix" : "Barselona Grand Prix",
+    "austrian grand prix" : "Avusturya Grand Prix",
+    "british grand prix" : "İngiltere Grand Prix",
+    "belgian grand prix" : "Belçika Grand Prix",
+    "dutch grand prix" : "Hollanda Grand Prix",
+    "italian grand prix" : "İtalya Grand Prix",
+    "spanish grand prix" : "İspanya Grand Prix",
+    "azerbaijan grand prix" : "Azerbaycan Grand Prix",
+    "singapore grand prix" : "Singapur Grand Prix",
+    "united states grand prix" : "Amerika Grand Prix",
+    "mexico city grand prix" : "Meksika Grand Prix",
+    "são paulo grand prix" : "São Paulo Grand Prix",
+    "las vegas grand prix" : "Las Vegas Grand Prix",
+    "qatar grand prix" : "Katar Grand Prix",
+    "abu dhabi grand prix" : "Abu Dabi Grand Prix",
+    "hungarian grand prix" : "Macaristan Grand Prix"
+  }
+}

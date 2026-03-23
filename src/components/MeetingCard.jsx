@@ -1,10 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const MeetingCard = ({ country_flag, meeting_name, country_name, meeting_official_name, date_start, date_end })=>{
 
+    const { t } = useTranslation();
     const startDate = new Date(date_start);
     const endDate = new Date(date_end);
     const startDay = startDate.getDate();
     const endDay = endDate.getDate();
-    const month = startDate.toLocaleString('en-EN', {month: 'short'}).toUpperCase();
+    const month = startDate.toLocaleString('locale', {month: 'short'}).toUpperCase();
+  
+    const displayCountry = t(`countries.${country_name.toLowerCase()}`);
+    const displayMeetingName = t(`meetingName.${meeting_name.toLowerCase()}`)
 
     return(
         <>
@@ -12,8 +18,8 @@ const MeetingCard = ({ country_flag, meeting_name, country_name, meeting_officia
             <div className="flex flex-row">
                 <img src={country_flag} alt="" className="w-14 h-10 rounded " />
                 <div className="mx-4">
-                    <h1 className="text-white font-extrabold text-2xl">{meeting_name}</h1>
-                    <p className="text-gray-400">{country_name}</p>
+                    <h1 className="text-white font-extrabold text-2xl">{displayMeetingName}</h1>
+                    <p className="text-gray-400">{displayCountry}</p>
                 </div>
             </div>
             <p className="text-yellow-400 my-2">{meeting_official_name}</p>

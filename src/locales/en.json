@@ -1,0 +1,80 @@
+{
+    "common" : {
+        "loading" : "Loading..."
+    },
+    "navbar": {
+        "schedule": "Schedule",
+        "standings": "Standings",
+        "features": "Features"
+    },
+    "hero" : {
+        "welcome" : "Welcome!",
+        "desc" : "Track, compare, analyze. All F1 data in real time on a single platform!",
+        "calendarButton": "View calendar",
+        "moreInfo": "More Info"
+    },
+    "featureSection" : {
+        "title" : "Features",
+        "desc" : "Our constantly updated list of features"
+    },
+    "features" : [
+        {"icon": "📅", "title": "Schedule", "description": "View the full race calendar for the season. Access details on dates, times, and locations.", "link": "/schedule"},
+        {"icon": "🏎", "title": "Drivers Championship", "description": "View the current standings of the drivers for the season.", "link": "/drivers-championship"},
+        {"icon": "🏆", "title": "Constructors Championship", "description": "View the current standings of the constructors for the season.", "link": "/constructors-championship"}
+    ],
+    "schedule" : {
+        "title" : "2026 Race Schedule",
+        "desc" : "Follow all the races of the season here."
+    },
+    "countries": {
+    "japan": "Japan",
+    "italy": "Italy",
+    "monaco": "Monaco",
+    "germany": "Germany",
+    "netherlands": "Netherlands",
+    "brazil": "Brazil",
+    "australia": "Australia",
+    "united kingdom": "United Kingdom",
+    "china" : "China",
+    "bahrain" : "Bahrain",
+    "saudi arabia" : "Saudi Arabia",
+    "canada" : "Canada",
+    "spain" : "Spain",
+    "austria" : "Austria",
+    "belgium" : "Belgium",
+    "hungary" : "Hungary",
+    "azerbaijan" : "Azerbaijan",
+    "singapore" : "Singapore",
+    "united states" : "United States",
+    "mexico" : "Mexico",
+    "qatar" : "Qatar",
+    "united arab emirates" : "United Arab Emirates"
+    },
+    "meetingName" : {
+    "pre-season testing" : "Pre-Season Testing",
+    "australian grand prix" : "Australia Grand Prix",
+    "chinese grand prix" : "China Grand Prix",
+    "japanese grand prix" : "Japan Grand Prix",
+    "bahrain grand prix" : "Bahrain Grand Prix",
+    "saudi arabian grand prix" : "Saudi Arabian Grand Prix",
+    "miami grand prix" : "Miami Grand Prix",
+    "canadian grand prix" : "Canada Grand Prix",
+    "monaco grand prix" : "Monaco Grand Prix",
+    "barcelona grand prix" : "Barcelona Grand Prix",
+    "austrian grand prix" : "Austria Grand Prix",
+    "british grand prix" : "British Grand Prix",
+    "belgian grand prix" : "Belgian Grand Prix",
+    "dutch grand prix" : "Dutch Grand Prix",
+    "italian grand prix" : "Italian Grand Prix",
+    "spanish grand prix" : "Spanish Grand Prix",
+    "azerbaijan grand prix" : "Azerbaijan Grand Prix",
+    "singapore grand prix" : "Singapore Grand Prix",
+    "united states grand prix" : "United States Grand Prix",
+    "mexico city grand prix" : "Mexico Grand Prix",
+    "são paulo grand prix" : "São Paulo Grand Prix",
+    "las vegas grand prix" : "Las Vegas Grand Prix",
+    "qatar grand prix" : "Qatar Grand Prix",
+    "abu dhabi grand prix" : "Abu Dhabi Grand Prix",
+    "hungarian grand prix" : "Hungarian Grand Prix"
+  }
+}

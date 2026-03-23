@@ -1,9 +1,18 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const {t, i18n} = useTranslation();
 
+   useEffect(() => {
+    console.log('i18n initialized:', i18n.language);
+  }, [i18n]);
+
+
+  
   return (
     <div className="flex justify-between w-screen fixed top-0 z-50 py-7 px-4 items-center bg-[#0A0E27] border-b border-red-500/20">
       {/* Logo */}
@@ -18,17 +27,18 @@ const Navbar = () => {
       {/* Desktop Links */}
       <nav className="hidden md:flex gap-8">
         <Link to="/schedule" className="relative pb-1 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
-          Schedule
+          {t('navbar.schedule')}
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
         <Link to="/drivers-championship" className="relative pb-1 ml-8 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
-          Standings
+          {t('navbar.standings')}
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
         <Link to="/#features" className=" mx-8 relative pb-1 font-normal text-zinc-300 hover:text-red-500 duration-300 group">
-          Features
+          {t('navbar.features')}
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
         </Link>
+        <LanguageSwitcher className="p-0"/>
       </nav>
 
       {/* Hamburger Icon (Mobile) */}
@@ -43,14 +53,15 @@ const Navbar = () => {
       {isOpen && (
         <div className="absolute top-20 left-0 right-0 bg-[#0A0E27] border-b border-red-500/20 flex flex-col gap-4 p-4 md:hidden">
           <Link to="/schedule" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
-            Schedule
+            {t('navbar.schedule')}
           </Link>
           <Link to="/" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
-            Standings
+            {t('navbar.standings')}
           </Link>
           <Link to="/#features" className="text-zinc-300 hover:text-red-500" onClick={() => setIsOpen(false)}>
-            Features
+            {t('navbar.features')}
           </Link>
+          <LanguageSwitcher />
         </div>
       )}
     </div>

@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next";
 const FeatureCard = ({ icon, title, description, link})=>{
+
+    const {t, i18n} = useTranslation();
+
     return(
         <>
         <Link to={link}><div className="bg-[#141C31] border-2 border-red-500/20 rounded-xl p-9 shadow-md shadow-red-500/20 mt-10 hover:shadow-red-500/30 hover:-translate-y-1 hover:border-4 transition-all duration-300 gradient-border" >
