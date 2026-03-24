@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react"
 import Layout from "../components/Layout";
 import DriverStandingsTable from "../components/DriverStandingsTable.jsx";
+import { useTranslation
 
+ } from "react-i18next";
 const DriversChampionship = ()=>{
 
     const [loading, setLoading] = useState(false);
     const [results,setResults] = useState([]);
+    const {t, i18n} = useTranslation();
 
     useEffect(()=>{
         const fetchDriverStandings = async ()=>{
@@ -39,18 +42,18 @@ const DriversChampionship = ()=>{
         <Layout>
             <div className="bg-[#0A0E27] min-w-screen min-h-screen flex flex-col items-center">
                 <div className="text-center">
-                    <h1 className="font-extrabold mt-15 text-transparent text-4xl bg-linear-to-r from-orange-500 to-amber-400 bg-clip-text"><span className="block sm:inline">2026</span> Pilotlar Şampiyonası</h1>
-                    <p className="m-4 text-gray-400 text-xl">Pilotlar Şampiyonası'nda pilotların durumunu gör.</p>
+                    <h1 className="font-extrabold mt-15 text-transparent text-4xl bg-linear-to-r from-orange-500 to-amber-400 bg-clip-text"><span className="block sm:inline">2026</span> {t('driversChamp.title')}</h1>
+                    <p className="m-4 text-gray-400 text-xl">{t('driversChamp.desc')}</p>
                 </div>
             
             {loading ? (
-                    <div>Yükleniyor...</div>
+                    <div>{t('common.loading')}</div>
                     ) : results ? (
                     <>
                         <DriverStandingsTable results={results} />
                     </>
                     ) : (
-                    <div className="text-center text-white mt-20">Yükleniyor</div>
+                    <div className="text-center text-white mt-20">{t('common.loading')}</div>
                     )}
             </div>
         </Layout>

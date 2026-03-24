@@ -76,5 +76,20 @@
     "qatar grand prix" : "Katar Grand Prix",
     "abu dhabi grand prix" : "Abu Dabi Grand Prix",
     "hungarian grand prix" : "Macaristan Grand Prix"
+  },
+  "driversChamp" : {
+    "title": "Pilotlar Şampiyonası",
+    "desc" : "Pilotlar Şampiyonası'nda pilotların durumunu gör.",
+    "position" : "POZ",
+    "driver" : "PİLOT",
+    "team" : "TAKIM",
+    "point" : "PUAN"
+  },
+  "constChamp" : {
+    "title" : "Markalar Şampiyonası",
+    "desc" : "Markalar Şampiyonası'nda markaların durumunu gör.",
+    "position" : "POZ",
+    "const" : "MARKA",
+    "point" : "PUAN"
   }
 }

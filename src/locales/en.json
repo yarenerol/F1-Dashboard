@@ -19,8 +19,8 @@
     },
     "features" : [
         {"icon": "📅", "title": "Schedule", "description": "View the full race calendar for the season. Access details on dates, times, and locations.", "link": "/schedule"},
-        {"icon": "🏎", "title": "Drivers Championship", "description": "View the current standings of the drivers for the season.", "link": "/drivers-championship"},
-        {"icon": "🏆", "title": "Constructors Championship", "description": "View the current standings of the constructors for the season.", "link": "/constructors-championship"}
+        {"icon": "🏎", "title": "Drivers' Championship", "description": "View the current standings of the drivers for the season.", "link": "/drivers-championship"},
+        {"icon": "🏆", "title": "Constructors' Championship", "description": "View the current standings of the constructors for the season.", "link": "/constructors-championship"}
     ],
     "schedule" : {
         "title" : "2026 Race Schedule",
@@ -76,5 +76,20 @@
     "qatar grand prix" : "Qatar Grand Prix",
     "abu dhabi grand prix" : "Abu Dhabi Grand Prix",
     "hungarian grand prix" : "Hungarian Grand Prix"
+    },
+    "driversChamp" : {
+    "title": "Drivers' Championship",
+    "desc" : "Check the drivers' standings in the Drivers' Championship.",
+    "position" : "POS",
+    "driver" : "DRIVER",
+    "team" : "TEAM",
+    "point" : "POINT"
+    },
+    "constChamp" : {
+    "title" : "Constructor's Championship",
+    "desc" : "Check the constructors' standings in the Constructors' Championship.",
+    "position" : "POS",
+    "const" : "CONSTRUCTOR",
+    "point" : "POINT"
   }
 }

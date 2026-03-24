@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react"
 import Layout from "../components/Layout";
 import ConstructorStandingsTable from "../components/ConstructorStandingsTable";
+import { useTranslation } from "react-i18next";
 const ConstructorsChampionship = ()=>{
 
     const [loading, setLoading] = useState(false);
     const [results,setResults] = useState([]);
+    const {t, i18n} = useTranslation();
 
     useEffect(()=>{
         const fetchConstructorStandings = async ()=>{
@@ -38,18 +40,18 @@ const ConstructorsChampionship = ()=>{
         <Layout>
             <div className="bg-[#0A0E27] min-w-screen min-h-screen flex flex-col items-center">
                 <div className="text-center">
-                    <h1 className="font-extrabold mt-15 text-transparent text-4xl bg-linear-to-r from-orange-500 to-amber-400 bg-clip-text"><span className="block sm:inline">2026</span> Markalar Şampiyonası</h1>
-                    <p className="m-4 text-gray-400 text-xl">Markalar Şampiyonası'nda markaların durumunu gör.</p>
+                    <h1 className="font-extrabold mt-15 text-transparent text-4xl bg-linear-to-r from-orange-500 to-amber-400 bg-clip-text"><span className="block sm:inline">2026</span> {t('constChamp.title')}</h1>
+                    <p className="m-4 text-gray-400 text-xl">{t('constChamp.desc')}</p>
                 </div>
             
             {loading ? (
-                    <div>Yükleniyor...</div>
+                    <div>{t('common.loading')}</div>
                     ) : results ? (
                     <>
                         <ConstructorStandingsTable results={results} />
                     </>
                     ) : (
-                    <div className="text-center text-white mt-20">Yükleniyor</div>
+                    <div className="text-center text-white mt-20">{t('common.loading')}</div>
                     )}
             </div>
         </Layout>
