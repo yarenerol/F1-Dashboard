@@ -22,8 +22,6 @@ F1 Dashboard is your ultimate companion for tracking Formula 1 racing data. Whet
   - Country flags, circuit information, race dates
   - Responsive card-based layout
   - Hover effects and smooth transitions
-
-### 🔄 Coming Soon
 - **👥 Driver Standings** - Track driver performance throughout the season
   - Live points table
   - Head-to-head comparisons
@@ -34,6 +32,7 @@ F1 Dashboard is your ultimate companion for tracking Formula 1 racing data. Whet
   - Constructor comparisons
   - Historical data
 
+### 🔄 Coming Soon
 - **⚔️ Advanced Comparison** - Detailed analysis
   - Driver vs Driver head-to-head
   - Performance metrics
