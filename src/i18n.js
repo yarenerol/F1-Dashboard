@@ -3,14 +3,19 @@ import { initReactI18next } from 'react-i18next';
 import tr from './locales/tr.json';
 import en from './locales/en.json';
 
+const savedLang = localStorage.getItem('language') || 'tr';
+
 i18n.use(initReactI18next).init({
   resources: {
     tr: { translation: tr },
     en: { translation: en }
   },
-  lng: 'tr',  // Default dil
+  lng: savedLang,
   fallbackLng: 'en',
   interpolation: { escapeValue: false }
+});
+i18n.on('languageChanged', (lng) => {
+  localStorage.setItem('language', lng);
 });
 console.log('i18n configured with:', {
   lng: i18n.language,
